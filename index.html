@@ -23,10 +23,10 @@
   <a href="#person">👤 ตัวบุคคล</a>
   <a href="#interpol">🔴 หมายแดง</a>
   <a href="#address">🏠 ที่อยู่/พิกัด</a>
+  <a href="#mapview">🗺️ แผนที่</a>
   <a href="#residence">📍 ประวัติที่พัก</a>
   <a href="#travel">✈️ ประวัติเดินทาง</a>
   <a href="#network">🕸️ เครือข่าย</a>
-  <a href="#mapview">🗺️ แผนที่</a>
   <a href="#digital">📱 ดิจิทัล</a>
   <a href="#docs">📄 เอกสาร</a>
 </nav>
@@ -277,6 +277,201 @@
   </div>
 </section>
 
+<!-- ============ MAP + RELATION CHART ============ -->
+<section id="mapview">
+  <div class="section-title"><div class="icon">🗺️</div>แผนที่ปักหมุด — ตำแหน่งที่คาดว่าพบผู้ต้องหา</div>
+
+  <!-- RELATION CHART -->
+  <div class="card" style="margin-bottom:18px;">
+    <div class="card-title">วิเคราะห์ความสัมพันธ์ — ผู้ต้องหาในหมายแดงคาดอยู่กับใคร ที่ไหน</div>
+    <div style="overflow-x:auto;">
+      <table class="data-table" style="min-width:700px;">
+        <thead>
+          <tr>
+            <th>ผู้ต้องหา (หมายแดง)</th>
+            <th>ความสัมพันธ์</th>
+            <th>บุคคลที่คาดอยู่ด้วย</th>
+            <th>ตำแหน่งที่น่าจะพบ</th>
+            <th>ระดับความเชื่อมั่น</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="label"><span style="color:var(--orange);font-weight:700">🔴 LI Bin (李彬)</span><br><small>A-3581/3-2026</small><br><span style="font-size:10px;color:var(--muted)">= LI Pin คนเดียวกัน</span></td>
+            <td class="value">หัวหน้าเครือข่าย<br>น้องชาย LI Yunzhou<br>พี่เขย WEN Rui</td>
+            <td class="value">
+              • <strong>CHEN TAO</strong> — ผู้รับ-โอนเงิน<br>
+              • <strong>LI Yunzhou</strong> — น้องชาย<br>
+              • <strong>WEN Rui</strong> — น้องเขย
+            </td>
+            <td class="value" style="color:var(--yellow)">
+              📍 สุขุมวิท/ทองหล่อ กทม.<br>
+              📍 Oriental Intl Apt<br>
+              📍 L&amp;H Villa Sathorn
+            </td>
+            <td class="value"><span class="badge badge-orange">สูง</span></td>
+          </tr>
+          <tr>
+            <td class="label"><span style="color:var(--red);font-weight:700">🔴 CHANG Lei (苌雷)</span><br><small>A-3583/3-2026</small></td>
+            <td class="value">อดีตธนาคาร<br>Lanzhou Bank</td>
+            <td class="value">
+              • <strong>CHEN TAO</strong> — ผู้สมคบหลัก<br>
+              • <strong>LI Bin</strong> — ผู้ร่วมวางแผน
+            </td>
+            <td class="value" style="color:var(--yellow)">
+              📍 สุขุมวิท กทม. (คาด)<br>
+              📍 สิงคโปร์ (คาด)<br>
+              📍 เส้นทางลาว
+            </td>
+            <td class="value"><span class="badge" style="background:#555;color:#fff">ปานกลาง</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NETWORK GRAPH SVG -->
+    <div style="margin-top:20px; background:#0d1117; border-radius:12px; padding:20px; overflow-x:auto;">
+      <div style="font-size:11px; color:var(--muted); margin-bottom:12px; text-align:center; letter-spacing:1px;">แผนผังความสัมพันธ์เครือข่าย</div>
+      <svg viewBox="0 0 780 340" style="width:100%;max-width:780px;display:block;margin:0 auto;font-family:inherit;">
+        <!-- Lines -->
+        <line x1="390" y1="80" x2="130" y2="200" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+        <line x1="390" y1="80" x2="650" y2="200" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+        <line x1="130" y1="200" x2="260" y2="290" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <line x1="130" y1="200" x2="130" y2="290" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <line x1="130" y1="200" x2="520" y2="290" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <!-- CHEN TAO - center top -->
+        <circle cx="390" cy="70" r="36" fill="#c0392b" stroke="#e74c3c" stroke-width="2"/>
+        <text x="390" y="65" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">CHEN TAO</text>
+        <text x="390" y="79" text-anchor="middle" fill="#ffcccc" font-size="9">🎯 เป้าหมายหลัก</text>
+        <!-- LI Bin = LI Pin -->
+        <circle cx="130" cy="200" r="32" fill="#784212" stroke="#e67e22" stroke-width="2.5"/>
+        <text x="130" y="192" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">LI Bin</text>
+        <text x="130" y="203" text-anchor="middle" fill="#ffd" font-size="8">🔴 A-3581</text>
+        <text x="130" y="213" text-anchor="middle" fill="#ffa" font-size="7">⚠️ ปล่อยตัว/ไทย</text>
+        <!-- CHANG Lei -->
+        <circle cx="650" cy="200" r="32" fill="#922b21" stroke="#e74c3c" stroke-width="2.5"/>
+        <text x="650" y="195" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">CHANG Lei</text>
+        <text x="650" y="208" text-anchor="middle" fill="#ff9999" font-size="8">🔴 A-3583</text>
+        <!-- ลบ LI Pin ออก เพราะคือ LI Bin คนเดียวกัน -->
+        <!-- LI Yunzhou -->
+        <circle cx="130" cy="290" r="24" fill="#1a5276" stroke="#3498db" stroke-width="1.5"/>
+        <text x="130" y="286" text-anchor="middle" fill="#fff" font-size="9">LI Yunzhou</text>
+        <text x="130" y="298" text-anchor="middle" fill="#adf" font-size="7">น้องชาย LI Pin</text>
+        <!-- WEN Rui -->
+        <circle cx="260" cy="290" r="24" fill="#1a5276" stroke="#3498db" stroke-width="1.5"/>
+        <text x="260" y="286" text-anchor="middle" fill="#fff" font-size="9">WEN Rui</text>
+        <text x="260" y="298" text-anchor="middle" fill="#adf" font-size="7">น้องเขย LI Pin</text>
+        <!-- Unknown -->
+        <circle cx="520" cy="290" r="24" fill="#333" stroke="#555" stroke-width="1.5"/>
+        <text x="520" y="286" text-anchor="middle" fill="#aaa" font-size="9">?? ผู้ร่วมขบวนการ</text>
+        <text x="520" y="298" text-anchor="middle" fill="#777" font-size="7">ไม่ทราบชื่อ</text>
+        <!-- Legend -->
+        <rect x="10" y="10" width="14" height="8" rx="2" fill="#c0392b"/>
+        <text x="28" y="18" fill="#ccc" font-size="9">เป้าหมาย/หมายแดง</text>
+        <rect x="10" y="24" width="14" height="8" rx="2" fill="#784212"/>
+        <text x="28" y="32" fill="#ccc" font-size="9">ปล่อยตัว-คาดอยู่ไทย</text>
+        <rect x="10" y="38" width="14" height="8" rx="2" fill="#1a5276"/>
+        <text x="28" y="46" fill="#ccc" font-size="9">บุคคลเกี่ยวข้อง</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- LEAFLET MAP -->
+  <div class="card">
+    <div class="card-title">แผนที่ปักหมุด — ตำแหน่งที่คาดว่าพบผู้ต้องหา (กรุงเทพมหานคร)</div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <div id="suspect-map" style="height:520px; border-radius:10px; overflow:hidden; border:2px solid #333;"></div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; font-size:11px;">
+      <span style="display:flex;align-items:center;gap:5px;"><span style="width:14px;height:14px;background:#e74c3c;border-radius:50%;display:inline-block;"></span> เป้าหมายหลัก (CHEN TAO)</span>
+      <span style="display:flex;align-items:center;gap:5px;"><span style="width:14px;height:14px;background:#c0392b;border-radius:50%;display:inline-block;border:2px solid #e74c3c;"></span> หมายแดง INTERPOL</span>
+      <span style="display:flex;align-items:center;gap:5px;"><span style="width:14px;height:14px;background:#e67e22;border-radius:50%;display:inline-block;"></span> ปล่อยตัวแล้ว — คาดอยู่ในไทย</span>
+      <span style="display:flex;align-items:center;gap:5px;"><span style="width:14px;height:14px;background:#3498db;border-radius:50%;display:inline-block;"></span> บุคคลเกี่ยวข้อง</span>
+    </div>
+    <script>
+    (function(){
+      var map = L.map('suspect-map', {zoomControl:true}).setView([13.735, 100.565], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        attribution:'© OpenStreetMap contributors', maxZoom:19
+      }).addTo(map);
+
+      function makeIcon(color, initials) {
+        var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="56" viewBox="0 0 48 56">'
+          +'<path d="M24 0 C10.7 0 0 10.7 0 24 C0 40 24 56 24 56 C24 56 48 40 48 24 C48 10.7 37.3 0 24 0Z" fill="'+color+'" stroke="#fff" stroke-width="2"/>'
+          +'<circle cx="24" cy="22" r="14" fill="rgba(255,255,255,0.2)"/>'
+          +'<text x="24" y="27" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" font-family="Arial">'+initials+'</text>'
+          +'</svg>';
+        return L.divIcon({
+          html: svg, className:'', iconSize:[48,56], iconAnchor:[24,56], popupAnchor:[0,-56]
+        });
+      }
+
+      var suspects = [
+        {
+          lat: 13.7303, lng: 100.5697,
+          color: '#e74c3c', initials: 'CT',
+          name: '🎯 CHEN TAO (陈涛)',
+          detail: '<b>เป้าหมายหลัก</b><br>Noble Be 33 ห้อง 19/111 ชั้น 30<br>ถ.สุขุมวิท 33 เขตวัฒนา<br><span style="color:#e74c3c">⚠️ ยังไม่ถูกจับกุม</span>',
+          badge: 'เป้าหมายหลัก'
+        },
+        {
+          lat: 13.7441, lng: 100.5727,
+          color: '#e74c3c', initials: 'CT',
+          name: '🎯 CHEN TAO — IP ล่าสุด',
+          detail: '<b>Supalai Oriental Sukhumvit 39</b><br>พิกัด GPS: 13°44\'41"N 100°34\'22"E<br>ตรวจพบ IP: 18 ก.พ. 2026 เวลา 17:00–18:00 น.<br><span style="color:#e67e22">iPhone 16 Pro | WeChat wxid_zdbqign6qjlc12</span>',
+          badge: 'IP ล่าสุด'
+        },
+        {
+          lat: 13.7290, lng: 100.5650,
+          color: '#e67e22', initials: 'LB',
+          name: '🔴 LI Bin (李彬) = LI Pin — A-3581',
+          detail: '<b>หมายแดง INTERPOL A-3581 — ปล่อยตัวแล้ว คาดอยู่ในไทย</b><br>PP: EA4225003 | บัตรจีน: 610113197103050012<br>หัวหน้าเครือข่าย | หลบหนีจาก HK 15 ธ.ค. 2567<br>ถูกจับที่ L&H Villa Sathorn → ส่งมาเลเซีย → <b>ปล่อยตัวแล้ว</b><br><span style="color:#e67e22">ปัจจุบันสืบทราบว่ากลับมาพำนักในราชอาณาจักรไทย</span>',
+          badge: 'ปล่อยตัว/คาดอยู่ไทย'
+        },
+        {
+          lat: 13.7330, lng: 100.5740,
+          color: '#c0392b', initials: 'CL',
+          name: '🔴 CHANG Lei (苌雷) — A-3583',
+          detail: '<b>หมายแดง INTERPOL A-3583</b><br>คาดพำนักบริเวณสุขุมวิท (ใกล้ CHEN TAO)<br>รองผจก.ฝ่ายต่างประเทศ Lanzhou Bank<br><span style="color:#e74c3c">PP: G48067703</span>',
+          badge: 'หมายแดง'
+        },
+        {
+          lat: 13.7388, lng: 100.5593,
+          color: '#3498db', initials: 'LY',
+          name: '🔍 LI Yunzhou (李云周)',
+          detail: '<b>น้องชายของ LI Bin (李彬)</b><br>คอนโดมิเนียม One9Five ถ.พระราม 9<br>GPS ล่าสุด: 100.559339, 13.738771<br>เวลา 17:12 น. 26 ม.ค. 2026<br><span style="color:#3498db">PP: EL9039323 | วีซ่า NON-O</span>',
+          badge: 'ติดตาม'
+        },
+        {
+          lat: 13.7441, lng: 100.5722,
+          color: '#3498db', initials: 'WR',
+          name: '🔍 WEN Rui (เหวินรุ่ย)',
+          detail: '<b>น้องเขยของ LI Bin (李彬)</b><br>Oriental International Apartment<br>GPS: 13°44\'41"N 100°34\'22"E<br>WeChat: Cer_ter | IP: 124.122.125.193<br><span style="color:#3498db">PP: EN6918181</span>',
+          badge: 'ติดตาม'
+        }
+      ];
+
+      suspects.forEach(function(s){
+        var marker = L.marker([s.lat, s.lng], {icon: makeIcon(s.color, s.initials)}).addTo(map);
+        marker.bindPopup(
+          '<div style="min-width:220px;font-family:sans-serif;">'
+          +'<div style="background:'+s.color+';color:#fff;padding:6px 10px;margin:-13px -20px 10px;border-radius:4px 4px 0 0;font-weight:bold;font-size:13px;">'+s.name+'</div>'
+          +'<div style="font-size:12px;line-height:1.7;">'+s.detail+'</div>'
+          +'</div>',
+          {maxWidth: 280}
+        );
+      });
+
+      L.circle([13.7350, 100.5700], {
+        color: '#e74c3c', fillColor: '#e74c3c', fillOpacity: 0.07,
+        radius: 900, weight: 1, dashArray: '6,4'
+      }).addTo(map).bindTooltip('⚠️ โซนเสี่ยงสูง — กลุ่มเครือข่ายอยู่บริเวณนี้', {permanent:false});
+
+    })();
+    </script>
+  </div>
+</section>
+
 <!-- ============ RESIDENCE ============ -->
 <section id="residence">
   <div class="section-title"><div class="icon">📍</div>ประวัติการแจ้งที่พักอาศัยตามมาตรา 38 — จำนวน 15 รายการ</div>
@@ -423,8 +618,8 @@
   </div>
 </section>
 
-<!-- ============ MAP + RELATION CHART ============ -->
-<section id="mapview">
+<!-- ============ MAP OLD (HIDDEN) ============ -->
+<section id="mapview-old" style="display:none">
   <div class="section-title"><div class="icon">🗺️</div>แผนที่ปักหมุด — ตำแหน่งที่คาดว่าพบผู้ต้องหา</div>
 
   <!-- RELATION CHART -->
