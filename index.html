@@ -282,9 +282,9 @@
   <div class="section-title"><div class="icon">🗺️</div>แผนที่ปักหมุด — ตำแหน่งที่คาดว่าพบผู้ต้องหา</div>
 
   <!-- RELATION CHART -->
-  <div class="card" style="margin-bottom:18px;">
+  <div class="card mobile-hide" style="margin-bottom:18px;">
     <div class="card-title">วิเคราะห์ความสัมพันธ์ — ผู้ต้องหาในหมายแดงคาดอยู่กับใคร ที่ไหน</div>
-    <div style="overflow-x:auto;">
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
       <table class="data-table" style="min-width:700px;">
         <thead>
           <tr>
@@ -473,7 +473,7 @@
 </section>
 
 <!-- ============ RESIDENCE ============ -->
-<section id="residence">
+<section id="residence" class="mobile-hide">
   <div class="section-title"><div class="icon">📍</div>ประวัติการแจ้งที่พักอาศัยตามมาตรา 38 — จำนวน 15 รายการ</div>
   <div class="card">
     <div class="card-title">การวิเคราะห์สถานที่พักอาศัยบ่อยครั้ง</div>
@@ -499,7 +499,7 @@
   </div>
 </section>
 
-<!-- ============ TRAVEL ============ -->
+<!-- ============ TRAVEL - mobile hidden detail tables ============ -->
 <section id="travel">
   <div class="section-title"><div class="icon">✈️</div>ประวัติการเดินทางเข้า-ออกราชอาณาจักรไทย</div>
   <div class="two-col">
@@ -538,7 +538,7 @@
       </div>
     </div>
   </div>
-  <div class="three-col">
+  <div class="three-col mobile-hide">
     <div class="card"><div class="card-title">ตารางเดินทาง หน้า 1</div><img src="images/travel_table1.png" alt="Travel 1" class="doc-img"></div>
     <div class="card"><div class="card-title">ตารางเดินทาง หน้า 2</div><img src="images/travel_table2.png" alt="Travel 2" class="doc-img"></div>
     <div class="card"><div class="card-title">ตารางเดินทาง หน้า 3</div><img src="images/travel_table3.png" alt="Travel 3" class="doc-img"></div>
@@ -596,7 +596,7 @@
 
   </div>
 
-  <div class="two-col">
+  <div class="two-col mobile-hide">
     <div class="card">
       <div class="card-title">ข้อมูลพฤติการณ์ — เครือข่าย (หน้า 1)</div>
       <img src="images/behavior1.png" alt="Behavior 1" class="doc-img">
@@ -606,9 +606,9 @@
       <img src="images/behavior2.png" alt="Behavior 2" class="doc-img">
     </div>
   </div>
-  <div class="two-col">
+  <div class="two-col mobile-hide">
     <div class="card">
-      <div class="card-title">ข้อมูลพฤติการณ์ — CHEN TAO (หน้า 3)</div>
+      <div class="card-title">ข้อมูลพฤตดิการณ์ — CHEN TAO (หน้า 3)</div>
       <img src="images/behavior3.png" alt="Behavior 3" class="doc-img">
     </div>
     <div class="card">
@@ -867,8 +867,8 @@
   </div>
 </section>
 
-<!-- ============ DOCS ============ -->
-<section id="docs">
+<!-- ============ DOCS - hidden on mobile ============ -->
+<section id="docs" class="mobile-hide">
   <div class="section-title"><div class="icon">📄</div>เอกสารราชการประกอบการปฏิบัติการ — ชุดสมบูรณ์</div>
   <div class="three-col">
     <div class="card"><div class="card-title">บุคคลต้องห้าม — หน้า 1</div><img src="images/person_main.png" alt="Person 1" class="doc-img"></div>

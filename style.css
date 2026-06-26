@@ -54,6 +54,83 @@ section { padding:26px 0; }
 .three-col { display:grid; grid-template-columns:1fr 1fr 1fr; gap:13px; }
 @media(max-width:900px){ .two-col,.three-col{ grid-template-columns:1fr 1fr; } }
 @media(max-width:580px){ .two-col,.three-col{ grid-template-columns:1fr; } }
+
+/* ========== MOBILE STYLES ========== */
+@media(max-width:640px){
+  /* Header */
+  header { padding:16px 14px 14px; }
+  .header-badge { font-size:9px; letter-spacing:1px; padding:3px 10px; }
+  header h1 { font-size:22px; letter-spacing:0; }
+  header .subtitle { font-size:11px; }
+
+  /* Nav */
+  nav.sticky a { padding:10px 10px; font-size:11px; }
+
+  /* Section */
+  section { padding:16px 0; }
+  .section-title { font-size:14px; margin-bottom:12px; }
+  .section-title .icon { width:28px; height:28px; font-size:13px; }
+
+  /* Alert box */
+  .alert-box { padding:12px 14px; }
+  .alert-box h2 { font-size:13px; }
+  .alert-box p { font-size:12px; line-height:1.7; }
+
+  /* Stat row — 2 per row on mobile */
+  .stat-row { grid-template-columns:1fr 1fr; gap:7px; }
+  .stat-box { padding:10px 8px; }
+  .stat-box .stat-num { font-size:20px; }
+  .stat-box .stat-label { font-size:9px; }
+
+  /* KV grid */
+  .kv-grid { grid-template-columns:1fr; gap:7px; }
+  .kv-item .v { font-size:13px; }
+
+  /* Card */
+  .card { padding:12px; border-radius:10px; }
+  .card-title { font-size:10px; letter-spacing:1px; margin-bottom:8px; }
+
+  /* Network cards */
+  .network-card { padding:11px; }
+  .network-card .nc-name { font-size:14px; }
+  .network-card .nc-detail { font-size:11px; }
+
+  /* Tables — horizontal scroll */
+  .data-table { font-size:11px; }
+  .data-table th { font-size:9px; padding:6px 7px; }
+  .data-table td { padding:6px 7px; font-size:11px; }
+  [style*="min-width:700px"] { min-width:600px !important; }
+
+  /* Timeline */
+  .tl-title { font-size:12px; }
+  .tl-sub { font-size:10px; }
+
+  /* Pin entries */
+  .pin-content .pin-name { font-size:12px; }
+  .pin-content .pin-addr { font-size:10px; }
+
+  /* Map */
+  #suspect-map { height:360px !important; }
+
+  /* Leaflet popups */
+  .leaflet-popup-content { font-size:12px !important; }
+
+  /* Hide verbose sections on mobile */
+  .mobile-hide { display:none !important; }
+
+  /* Full-width image docs */
+  .doc-img { border-radius:6px; }
+
+  /* Container padding */
+  .container { padding:0 10px; }
+
+  /* Wechat box */
+  .wechat-box { font-size:11px; }
+  .wechat-box .wc-id { font-size:12px; }
+
+  /* SVG network chart */
+  svg[viewBox="0 0 780 340"] { min-width:500px; }
+}
 .doc-img { width:100%; border-radius:8px; border:1px solid var(--border); display:block; }
 .pin-entry { display:flex; gap:10px; align-items:flex-start; padding:10px; border-radius:8px; border:1px solid var(--border); margin-bottom:8px; background:rgba(45,66,112,0.15); }
 .pin-entry.hot { border-color:var(--red); background:rgba(192,57,43,0.12); }
